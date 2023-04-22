@@ -1,24 +1,36 @@
 import React, { useState } from "react";
 
-function VariableBlock() {
-  const [minNumber, setMinNumber] = useState(0);
-  const [maxNumber, setMaxNumber] = useState(0);
+// TODO: Standardize formatting settings between Windows laptop and MacBook
 
-  const handleMinNumber = (num) => {
-    setMinNumber(num);
-  };
-  const handleMaxNumber = (num) => {
-    setMaxNumber(num);
-  };
-  return (
-    <div>
-      <input type="number" value={minNumber} onChange={handleMinNumber}></input>
-      <>&lt;=</>
-      <input type="text" id="v-name"></input>
-      <>&lt;=</>
-      <input type="number" value={maxNumber} onChange={handleMaxNumber}></input>
-    </div>
-  );
+function VariableBlock() {
+	const [minNumber, setMinNumber] = useState(0);
+	const [maxNumber, setMaxNumber] = useState(0);
+
+	const handleMinNumber = (num) => {
+		setMinNumber(num);
+	};
+	const handleMaxNumber = (num) => {
+		setMaxNumber(num);
+	};
+	return (
+		<div>
+			<input
+				type="number"
+				value={minNumber}
+				onChange={handleMinNumber}
+				required
+			></input>
+			<>&lt;=</>
+			<input type="text" id="v-name" required></input>
+			<>&lt;=</>
+			<input
+				type="number"
+				value={maxNumber}
+				onChange={handleMaxNumber}
+				required
+			></input>
+		</div>
+	);
 }
 
 export default VariableBlock;
