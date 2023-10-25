@@ -1,7 +1,12 @@
 import React from "react";
 
 function VariableBlock() {
-	return <div>VariableBlock</div>;
+	return (
+		<>
+			<label htmlFor="name" />
+			<input id="name" />
+		</>
+	);
 }
 
 export default VariableBlock;

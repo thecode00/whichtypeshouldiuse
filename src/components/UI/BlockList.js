@@ -1,12 +1,19 @@
 import React, { useContext } from "react";
-import VariableContext from "../../store/variable-context";
 import Card from "../Card/Card";
 import VariableBlock from "./VariableBlock";
+import Button from "./Button";
 
 function BlockList() {
-	const ctx = useContext(VariableContext);
-	// TODO: 각 변수별 블록 컴포넌트 구현
-	return <Card>BlockList</Card>;
+	const variables = [];
+
+	const addVariableHandler = (data) => {};
+	const content = variables.map((data) => <VariableBlock />);
+	return (
+		<Card>
+			{content}
+			<Button onClick={addVariableHandler} />
+		</Card>
+	);
 }
 
 export default BlockList;
