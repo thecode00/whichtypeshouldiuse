@@ -1,5 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
+import { LanguageContextProvider } from "./context/language-context";
+import VariableBlock from "./components/UI/VariableBlock";
 
 function App() {
 	return (
@@ -17,6 +19,9 @@ function App() {
 				>
 					Learn React
 				</a>
+				<LanguageContextProvider>
+					<VariableBlock />
+				</LanguageContextProvider>
 			</header>
 		</div>
 	);
