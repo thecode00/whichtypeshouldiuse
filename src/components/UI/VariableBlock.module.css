@@ -1,0 +1,10 @@
+.block {
+  display: flex;
+  flex-direction: row;
+  text-align: justify;
+}
+
+.display-block {
+  display: flex;
+  flex-direction: column;
+}
